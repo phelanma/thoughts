@@ -1,2 +1,14 @@
-# thoughts
-random collection of observations - ideas - experiments
+# Abyss
+Random collection of observations - ideas - experiments
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
