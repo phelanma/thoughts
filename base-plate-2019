@@ -1,0 +1,29 @@
+BASE PLATE FOR CONTAINERS
+
+container
+  ^ application
+     - service/glue-code
+      > auth/client
+        - jwt/client
+      > logger
+        - file-logger/rotation
+      > http/server-hooks
+        - additional event bindings
+      > http/server-template
+        - simple server config
+      > dbclient
+        - CRUD opertations
+      > mq consumer
+        - mq connector
+        - register
+      > mq producer
+        - mq connector
+        - publish
+      > healthcheck
+        - /healthcheck
+        - auth-port::/healthcheck/details
+  ^ consul/sdclient
+  ^ filebeat -> ELK | (E)LG
+  ^ heartbeat | grafana/community
+  ^ metricbeat | grafana/community
+  ^ packetbeat? | grafana/community
