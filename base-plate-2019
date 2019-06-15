@@ -2,6 +2,7 @@ BASE PLATE FOR CONTAINERS
 
 container
   ^ application
+     ~ node/sig-enabler
      - service/glue-code
       > auth/client
         - jwt/client
@@ -23,7 +24,19 @@ container
         - /healthcheck
         - auth-port::/healthcheck/details
   ^ consul/sdclient
+
   ^ filebeat -> ELK | (E)LG
   ^ heartbeat | grafana/community
   ^ metricbeat | grafana/community
   ^ packetbeat? | grafana/community
+
+--------- DOCKER HOST ----------
+
+c application
+
+c filebeat -> ELK | (E)LG
+c heartbeat | grafana/community
+c metricbeat | grafana/community
+c packetbeat? | grafana/community
+
+----------------------------
