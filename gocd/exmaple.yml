@@ -1,0 +1,16 @@
+format_version: 3
+pipelines:
+  node-package-build:
+    group: defaultGroup
+    template: node-package-builder
+    label_template: ${COUNT}
+    lock_behavior: unlockWhenFinished
+    display_order: -1
+    materials:
+      git:
+        git: https://github.com/
+        username: 
+        shallow_clone: false
+        auto_update: false
+        branch: master
+        encrypted_password: 
