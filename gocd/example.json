@@ -1,0 +1,26 @@
+{
+  "group": "defaultGroup",
+  "name": "node-package-build",
+  "display_order_weight": -1.0,
+  "label_template": "${COUNT}",
+  "lock_behavior": "unlockWhenFinished",
+  "environment_variables": [],
+  "parameters": [],
+  "materials": [
+    {
+      "url": "https://github.com/...",
+      "branch": "master",
+      "shallow_clone": false,
+      "filter": {
+        "ignore": [],
+        "whitelist": []
+      },
+      "auto_update": false,
+      "username": "...",
+      "encrypted_password": "...",
+      "type": "git"
+    }
+  ],
+  "stages": [],
+  "template": "node-package-builder"
+}
